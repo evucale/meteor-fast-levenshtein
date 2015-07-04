@@ -24,7 +24,7 @@
   /**
    * Based on the algorithm at http://en.wikipedia.org/wiki/Levenshtein_distance.
    */
-  var Levenshtein = {
+  Levenshtein = {
     /**
      * Calculate levenshtein distance of the two strings.
      *
@@ -176,23 +176,5 @@
 
   };
 
-  // amd
-  if (typeof define !== "undefined" && define !== null && define.amd) {
-    define(function() {
-      return Levenshtein;
-    });
-  }
-  // commonjs
-  else if (typeof module !== "undefined" && module !== null) {
-    module.exports = Levenshtein;
-  }
-  // web worker
-  else if (typeof self !== "undefined" && typeof self.postMessage === 'function' && typeof self.importScripts === 'function') {
-    self.Levenshtein = Levenshtein;
-  }
-  // browser main thread
-  else if (typeof window !== "undefined" && window !== null) {
-    window.Levenshtein = Levenshtein;
-  }
 }());
 
