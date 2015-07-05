@@ -77,6 +77,18 @@
 
       return nextCol;
     },
+    /**
+     * Calculate levenshtein distance of the two strings in percent.
+     *
+     * @param str1 String the first string.
+     * @param str2 String the second string.
+     * @return levenshtein distance in percent as number (between 0 and 1).
+     */
+    getPercent: function(str1, str2) {
+      var distance = Levenshtein.get(str1, str2);
+      var longerLength = Math.max(str1.length,str2.length);
+      return (longerLength - distance) / longerLength;
+    },
 
     /**
      * Asynchronously calculate levenshtein distance of the two strings.
@@ -177,4 +189,3 @@
   };
 
 }());
-
