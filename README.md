@@ -31,11 +31,11 @@ var distance = Levenshtein.get('back', 'book');   // 2
 var distance = Levenshtein.get('我愛你', '我叫你');   // 1
 ```
 
-You can also calculate the compliance in percent:
+You can also calculate the compliance in percent (return values between 0 and 1):
 
 ```javascript
-var distance = Levenshtein.getPercent('archéologique', 'archeologie');   // ~0.43
-var distance = Levenshtein.getPercent('我愛你', '我叫你');   // ~0.67
+var percent = Levenshtein.getPercent('archéologique', 'archeologie');   // ~0.43
+var percent = Levenshtein.getPercent('我愛你', '我叫你');   // ~0.67
 ```
 
 ## License
