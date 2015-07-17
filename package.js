@@ -1,7 +1,7 @@
 Package.describe({
   name: 'evucale:fast-levenshtein',
   summary: "fast-levenshtein (inofficial): Efficient implementation with asynchronous callback support",
-  version: "1.0.0",
+  version: "1.1.0",
   git: "https://github.com/evucale/meteor-fast-levenshtein.git"
 });
 
